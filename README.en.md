@@ -89,9 +89,6 @@ is **greatly appreciated**.
 ## Authors
 
 - **João Augusto Lissoni Lanjoni** - _Developer & Member of He4rt Developers_ - [@lanjoni](https://twitter.com/gutolanjoni)
-
-## Contributors
-
 - **Isabela Caovila Baldim** - _Developer & Artist_ - [GitHub @ContagiousMisfit](https://github.com/ContagiousMisfit) · [Instagram @isa_de_jesus.png](https://www.instagram.com/isa_de_jesus.png/)
 
 ---
