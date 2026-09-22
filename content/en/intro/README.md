@@ -1,4 +1,4 @@
-# Introduction <img align="right" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clojure/clojure-original.svg" alt="Language logo" width="100">
+# Introduction 
 
 <p align="center">
   <img src="https://media.giphy.com/media/omHPYZttAVAAw/giphy.gif" width="320" alt="Studio Ghibli characters walking together">
@@ -7,6 +7,8 @@
 </p>
 
 ## What is Clojure?
+
+<img align="right" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clojure/clojure-original.svg" alt="Language logo" width="100">
 
 ### History
 
