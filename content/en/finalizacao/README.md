@@ -20,6 +20,12 @@ Thank you for everything.
 
 *From the community, for the community. 💜*
 
+<p align="center">
+  <img src="https://media.giphy.com/media/ZZX3ZweA2LBbq/giphy.gif" width="320" alt="Kiki flying over the city at sunset">
+  <br>
+  <em>Off you go — the sky is yours now.</em>
+</p>
+
 ---
 
 ### *Social*

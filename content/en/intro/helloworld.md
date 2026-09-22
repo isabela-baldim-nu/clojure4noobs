@@ -32,6 +32,12 @@ We will cover syntax in more depth later. For now, just make sure everything ran
 
 You have taken your first step with Clojure. We can move on! How did it feel?
 
+<p align="center">
+  <img src="https://media.giphy.com/media/h0uYtwIV9liVy/giphy.gif" width="320" alt="Kiki taking off on her broom">
+  <br>
+  <em>First flight complete. No crashes so far!</em>
+</p>
+
 If you want to dive deeper into Lisp, two classics await you in the Temple of the Ancients: [Structure and Interpretation of Computer Programs](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html) and [Practical Common Lisp](https://gigamonkeys.com/book/)!
 
 <p align="right">

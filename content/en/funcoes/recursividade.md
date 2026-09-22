@@ -6,6 +6,12 @@ Borrowing the definition from José Romildo Malaquias (Chapter 6 of his Function
 
 > **Recursion**: see *Recursion*. If you want the official word, the [Clojure special forms reference](https://clojure.org/reference/special_forms#recur) has your back.
 
+<p align="center">
+  <img src="https://media.giphy.com/media/buiddJIVvHHXReeJbe/giphy.gif" width="220" alt="Soot sprites carrying coal one after another">
+  <br>
+  <em>One sprite calls the next, who calls the next, who calls the next...</em>
+</p>
+
 Roughly: when we see *recursion*, a function calls a subroutine that happens to be itself — an infinite-looking idea applied to something finite (deep, right?).
 
 A fun example is counting backwards (you will see why this matters in a moment):

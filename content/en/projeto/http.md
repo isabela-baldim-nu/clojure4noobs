@@ -112,6 +112,12 @@ $ lein run
 
 You should see the message that the server started! Open your browser and visit `localhost:3000`!
 
+<p align="center">
+  <img src="https://media.giphy.com/media/S5Pt1ec834VWas7XGK/giphy.gif" width="280" alt="Calcifer burning happily">
+  <br>
+  <em>Calcifer is keeping your server warm on port 3000.</em>
+</p>
+
 ---
 
 See how elegant an HTTP server can be in Clojure? Time to wrap up.

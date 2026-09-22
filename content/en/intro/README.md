@@ -1,5 +1,11 @@
 # Introduction <img align="right" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clojure/clojure-original.svg" alt="Language logo" width="100">
 
+<p align="center">
+  <img src="https://media.giphy.com/media/omHPYZttAVAAw/giphy.gif" width="320" alt="Studio Ghibli characters walking together">
+  <br>
+  <em>Grab your backpack — the journey starts here.</em>
+</p>
+
 ## What is Clojure?
 
 ### History

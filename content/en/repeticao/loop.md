@@ -17,6 +17,12 @@ At the end you need `recur` so the next pass runs with the updated binding of `i
 
 That is the basic shape of a `loop`!
 
+<p align="center">
+  <img src="https://media.giphy.com/media/WOfroaZcqVIc6rbN51/giphy.gif" width="240" alt="Soot sprite bouncing in place">
+  <br>
+  <em>Soot sprites: the original infinite loop.</em>
+</p>
+
 ---
 
 How were the iteration constructs? Which is your favorite? Next we will look at functions in Clojure.
