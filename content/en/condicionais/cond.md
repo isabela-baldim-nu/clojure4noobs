@@ -7,12 +7,12 @@ Meet `cond` with a simple example: multiple conditions...
 ```clojure
 (let [n 10]
   (cond
-    (> n 0) (println "O número é positivo!")
-    (< n 0) (println "O número é negativo!")
-    :else (println "Ok, o número não é positivo nem negativo...")))
+    (> n 0) (println "The number is positive!")
+    (< n 0) (println "The number is negative!")
+    :else (println "Okay, the number is neither positive nor negative...")))
 
 ;; Result:
-;;  O número é positivo!
+;;  The number is positive!
 ;;  nil
 ```
 

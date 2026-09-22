@@ -16,10 +16,10 @@ It sounds a bit complex, but it is practical. See:
 Another example, this time with a named function:
 
 ```clojure
-(defn multiplicar [a b]
+(defn multiply [a b]
   (* a b))
 
-(reduce multiplicar [1 2 3 4])
+(reduce multiply [1 2 3 4])
 
 ;; Result:
 ;;  24

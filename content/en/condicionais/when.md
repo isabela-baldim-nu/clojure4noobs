@@ -6,16 +6,16 @@ It would be nice to run several functions at once when a condition is true, righ
 
 ```clojure
 (when true
-  (println "Testando 1")
-  (println "Testando 2")
-  (println "Testando 3")
-  (println "Testando 4"))
+  (println "Running diagnostic 1")
+  (println "Running diagnostic 2")
+  (println "Running diagnostic 3")
+  (println "Warp core stable, all systems go"))
 
 ;; Result:
-;;  Testando 1
-;;  Testando 2
-;;  Testando 3
-;;  Testando 4
+;;  Running diagnostic 1
+;;  Running diagnostic 2
+;;  Running diagnostic 3
+;;  Warp core stable, all systems go
 ;;  nil
 ```
 

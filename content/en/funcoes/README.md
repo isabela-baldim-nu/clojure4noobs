@@ -7,13 +7,13 @@ When we talk about functions we are talking about most of what a functional lang
 That is the idea. How do we declare a function in Clojure?
 
 ```clojure
-(defn oi []
-  (println "Oi!"))
+(defn greet []
+  (println "Hello there!"))
 
-(oi)
+(greet)
 
 ;; Result:
-;;  Oi!
+;;  Hello there!
 ;;  nil
 ```
 
@@ -21,17 +21,17 @@ The structure is:
 - `(`: start of a list
 - `defn`: we are declaring a function
 - `[]`: arguments/parameters (none in this case)
-- `(println "Oi!")`: print the message "Oi!"
+- `(println "Hello there!")`: print the message "Hello there!"
 - `)`: end of the list
-- `(oi)`: *invoke* the function
+- `(greet)`: *invoke* the function
 
 Functions always look like this: parameters go in square brackets and are used in the body. Here is a simple function that adds two values:
 
 ```clojure
-(defn soma [a b]
+(defn sum [a b]
   (println (+ a b)))
 
-(soma 1 2)
+(sum 1 2)
 
 ;; Result:
 ;;  3
@@ -44,13 +44,13 @@ In this shape we take two parameters, add them, and print the result.
 What if we want multiple arities — different behavior depending on how many arguments we get? We can!
 
 ```clojure
-(defn testando-argumentos
-  ([a] (println "Apenas um argumento foi enviado!"))
-  ([a b] (println "Dois argumentos foram enviados!")))
+(defn testing-arguments
+  ([a] (println "Only one argument was sent!"))
+  ([a b] (println "Two arguments were sent!")))
 
-(testando-argumentos 1) ;; Apenas um argumento foi enviado!
+(testing-arguments 1) ;; Only one argument was sent!
 
-(testando-argumentos 1 2) ;; Dois argumentos foram enviados!
+(testing-arguments 1 2) ;; Two arguments were sent!
 ```
 
 This is Clojure's way of handling functions that behave differently based on argument count!
@@ -58,27 +58,27 @@ This is Clojure's way of handling functions that behave differently based on arg
 What if we want unbounded arguments (like `+`)? Yes:
 
 ```clojure
-(defn infinitos [& args]
+(defn endless [& args]
   (println args))
 
-(infinitos 1 2 3 4) ;; (1 2 3 4)
+(endless 1 2 3 4) ;; (1 2 3 4)
 ```
 
 You receive a list of arguments and can work with each however you like! If you only care about the first one and still want to accept the rest:
 
 ```clojure
-(defn infinitos-2 [primeiro & args]
-  (println "O primeiro argumento foi " primeiro "\nOs demais são: " args))
+(defn endless-2 [first-arg & args]
+  (println "The first argument was " first-arg "\nThe others are: " args))
 
-(infinitos-2 1 2 3 4)
+(endless-2 1 2 3 4)
 
 ;; Result:
-;;  O primeiro argumento foi  1 
-;;  Os demais são:  (2 3 4)
+;;  The first argument was  1 
+;;  The others are:  (2 3 4)
 ;;  nil
 ```
 
-Here we only treat the first argument; the rest stay as a list! To treat the second as well you could write `[primeiro segundo & args]`, and so on!
+Here we only treat the first argument; the rest stay as a list! To treat the second as well you could write `[first-arg second-arg & args]`, and so on!
 
 ---
 

@@ -32,7 +32,7 @@ We will cover syntax in more depth later. For now, just make sure everything ran
 
 You have taken your first step with Clojure. We can move on! How did it feel?
 
-If you want to learn more about Lisp, I recommend the materials from [UFRN](https://www.dca.ufrn.br/~adelardo/lisp/) and [UFG](https://ww2.inf.ufg.br/~eduardo/lp/alunos/lisp/intro.html) (both in Portuguese)!
+If you want to dive deeper into Lisp, two classics await you in the Temple of the Ancients: [Structure and Interpretation of Computer Programs](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html) and [Practical Common Lisp](https://gigamonkeys.com/book/)!
 
 <p align="right">
   <a href="https://github.com/lanjoni/clojure4noobs/tree/main/content/en/intro/leiningen.md">Next -> Leiningen</a>

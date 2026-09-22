@@ -7,14 +7,14 @@ See the example below — it should click:
 ```clojure
 (let [n 10]
   (case n
-    1 "Um!"
-    2 "Dois!"
-    3 "Três!"
-    4 "Quatro!"
-    "Maior que 4!"))
+    1 "One ring!"
+    2 "Two towers!"
+    3 "Three laws of robotics!"
+    4 "Fourth wall broken!"
+    "It's over nine thousand!"))
 
 ;; Result:
-;;  "Maior que 4!"
+;;  "It's over nine thousand!"
 ```
 > We did not use `println` here, so the result is just a `string`!
 

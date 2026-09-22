@@ -13,7 +13,7 @@ The output matches what you sent. Sets also refuse duplicates! If you try `#{1 2
 Let's define a set for the next examples:
 
 ```clojure
-(def set-desenvolvedores
+(def set-developers
     #{"Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício"})
 ```
 
@@ -22,28 +22,28 @@ Let's define a set for the next examples:
 To check whether something is a set, use `set?`!
 
 ```clojure
-(set? desenvolvedores)
+(set? set-developers)
 ```
 
-The output is `true` if it really is a set! If you run `(set? lista-desenvolvedores)` you get `false`!
+The output is `true`, because it really is a set! If you run `(set? list-developers)` you get `false`!
 
 ## Contains?
 
 To check whether a value exists in a set we have two options, starting with `contains?`!
 
 ```clojure
-(contains? set-desenvolvedores "Daniel")
+(contains? set-developers "Daniel")
 ```
 
-The output is `true`, because `"Daniel"` is in the set! `(contains? set-desenvolvedores "Guto")` returns `false`!
+The output is `true`, because `"Daniel"` is in the set! `(contains? set-developers "Guto")` returns `false`!
 
 We can also look it up like this:
 
 ```clojure
-(set-desenvolvedores "Daniel")
+(set-developers "Daniel")
 ```
 
-Here the output is `"Daniel"`, and `(set-desenvolvedores "Guto")` returns `nil`! Why does this work?
+Here the output is `"Daniel"`, and `(set-developers "Guto")` returns `nil`! Why does this work?
 
 Remember that sets are hashed collections? The value you pass is the key. If the set finds it, it returns that value; if not, it returns nil!
 
@@ -51,16 +51,16 @@ Remember that sets are hashed collections? The value you pass is the key. If the
 
 We can also declare a set of keywords, with the syntax `:keyword`! A keyword's value is itself, so it behaves a bit differently from strings...
 
-If you try something like `("Guto" set-desenvolvedores)` you will not get `nil` — you will get an error! With keywords that does not happen: you can put the keyword before or after the set, as below:
+If you try something like `("Guto" set-developers)` you will not get `nil` — you will get an error! With keywords that does not happen: you can put the keyword before or after the set, as below:
 
 ```clojure
-(def letras #{:a :b :c})
+(def letters #{:a :b :c})
 
-(:a letras) ;; :a
+(:a letters) ;; :a
 
-(letras :a) ;; :a
+(letters :a) ;; :a
 
-(:d letras) ;; nil
+(:d letters) ;; nil
 ```
 
 ## Conj
@@ -68,7 +68,7 @@ If you try something like `("Guto" set-desenvolvedores)` you will not get `nil` 
 We can still use `conj` to add an item to a set:
 
 ```clojure
-(conj set-desenvolvedores "Guto")
+(conj set-developers "Guto")
 ```
 
 The output is `#{"Canhassi" "Kalane" "Daniel" "Fabrício" "Guto" "Cherry"}`, with the new value included!
@@ -78,7 +78,7 @@ The output is `#{"Canhassi" "Kalane" "Daniel" "Fabrício" "Guto" "Cherry"}`, wit
 To remove an item from a set, use `disj`:
 
 ```clojure
-(disj set-desenvolvedores "Fabrício")
+(disj set-developers "Fabrício")
 ```
 
 The output is `#{"Canhassi" "Kalane" "Daniel" "Cherry"}`. If the value is not there, you simply get the set back — no error.

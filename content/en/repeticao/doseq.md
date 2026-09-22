@@ -5,9 +5,9 @@ This will probably be the shortest topic! `doseq` is simply a `for` that returns
 See the example below:
 
 ```clojure
-(def numeros [0 1 2 3 4 5 6 7 8 9])
+(def numbers [0 1 2 3 4 5 6 7 8 9])
 
-(doseq [i numeros]
+(doseq [i numbers]
       (println i))
 
 ;; Result:

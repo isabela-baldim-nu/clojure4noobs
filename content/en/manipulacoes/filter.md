@@ -16,10 +16,10 @@ That is the *main* job of `filter`. See:
 Anonymous functions work the same way as with `map`. Here is a named function instead:
 
 ```clojure
-(defn maior-que-3 [n]
+(defn greater-than-3 [n]
   (> n 3))
 
-(filter maior-que-3 (range 1 10))
+(filter greater-than-3 (range 1 10))
 
 ;; Result:
 ;;  (4 5 6 7 8 9)

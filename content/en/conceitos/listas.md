@@ -28,14 +28,14 @@ Now the output is the expected `(1 2 3 4 5)`. We can also use `list` to create a
 Let's define a list for the examples below.
 
 ```clojure
-(def lista-desenvolvedores
+(def list-developers
     '("Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício"))
 ```
 
 We can use other functions on this list, such as `count`.
 
 ```clojure
-(count lista-desenvolvedores)
+(count list-developers)
 ```
 
 The return value is `5`, because we declared 5 items!
@@ -45,7 +45,7 @@ The return value is `5`, because we declared 5 items!
 How do we get the first item? With `first`!
 
 ```clojure
-(first lista-desenvolvedores)
+(first list-developers)
 ```
 
 The output is `"Kalane"`, the first item of our list!
@@ -55,7 +55,7 @@ The output is `"Kalane"`, the first item of our list!
 And the remaining items, skipping the first, just like with vectors? We use `rest`!
 
 ```clojure
-(rest lista-desenvolvedores)
+(rest list-developers)
 ```
 
 The output is `("Daniel" "Cherry" "Canhassi" "Fabrício")`!
@@ -65,14 +65,14 @@ The output is `("Daniel" "Cherry" "Canhassi" "Fabrício")`!
 What if we want a specific index, like with vectors? Yes!
 
 ```clojure
-(nth list-desenvolvedores 3)
+(nth list-developers 3)
 ```
 > The output would be `"Canhassi"`!
 
 But could we then do this (as with vectors)?
 
 ```clojure
-(list-desenvolvedores 3)
+(list-developers 3)
 ```
 
 No! If you ran that snippet you probably hit an error. With lists we cannot use indexes the same way we do with vectors...
@@ -82,7 +82,7 @@ No! If you ran that snippet you probably hit an error. With lists we cannot use 
 Remember that with vectors we can add items at the beginning or the end? With lists, `conj` adds only at the **front**!
 
 ```
-(conj lista-desenvolvedores "Guto")
+(conj list-developers "Guto")
 ```
 
 The output is `("Guto" "Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício")`!

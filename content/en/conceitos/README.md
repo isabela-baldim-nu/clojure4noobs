@@ -15,7 +15,7 @@ Yes, this moment has arrived... Time to understand Clojure syntax a bit better. 
 The first visual cue is parentheses marking the start of a form. You can simplify the syntax as:
 
 ```clj
-(funcao argumento1 argumento2 argumento3 ...)
+(function arg1 arg2 arg3 ...)
 ```
 
 When you open parentheses you *tell* Clojure you are starting a function. In Lisp terms, that is a list whose first item is the function name, followed by its arguments, plus whatever should be done with those arguments (as we mentioned earlier).
@@ -45,14 +45,14 @@ Variables are a special topic in Clojure. Can we even *call it a variable* if it
 You define them with `def`, as in:
 
 ```clj
-(def comunidade "He4rt")
+(def community "He4rt")
 ```
 
 Now let's print a message with `println`:
 
 ```clj
-user=> (println "Olá" comunidade "!")
-Olá He4rt !
+user=> (println "Hello" community "!")
+Hello He4rt !
 nil
 ```
 > Do not worry about that `nil`. It only means the function's return value is null (it was just printing). In Clojure every function returns something, even if that something is `nil`!

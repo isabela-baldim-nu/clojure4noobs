@@ -5,14 +5,14 @@ An anonymous function is a function that was not necessarily declared with a nam
 A simple anonymous function looks like this:
 
 ```clojure
-(def ola
-  (fn [nome]
-    (println "Olá," nome)))
+(def hello
+  (fn [name]
+    (println "Hello," name)))
 
-(ola "He4rt Developers")
+(hello "He4rt Developers")
 
 ;; Result:
-;;  Olá, He4rt Developers
+;;  Hello, He4rt Developers
 ;;  nil
 ```
 
@@ -25,19 +25,19 @@ Anonymous functions unlock something magical: returning other functions to be co
 Watch this:
 
 ```clojure
-(defn multiplicar [multiplicar-por]
+(defn multiply [multiply-by]
   (fn [n]
-    (* n multiplicar-por)))
+    (* n multiply-by)))
 
-(def dobrando
-  (multiplicar 2))
+(def doubling
+  (multiply 2))
 
-(dobrando 2) ;; 4
+(doubling 2) ;; 4
 
-(def triplicando
-  (multiplicar 3))
+(def tripling
+  (multiply 3))
 
-(triplicando 4) ;; 12
+(tripling 4) ;; 12
 ```
 
 Here the anonymous function builds a new function that multiplies by a given number. Pretty cool, right?

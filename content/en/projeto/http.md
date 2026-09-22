@@ -87,7 +87,7 @@ Now we create a function called `app` that handles routing and responses:
 (defn app [req]
   {:status  200
    :headers {"Content-Type" "text/html"}
-   :body    (str "Salve He4rt Developers <3")})
+   :body    (str "May the source be with you, He4rt Developers <3")})
 ```
 
 We are not inspecting the request type here! We just prepare the server to accept GET requests (by default) at the root (`/`)! The body has a greeting — customize it however you like. You can also change `"Content-Type"` as needed.
@@ -97,7 +97,7 @@ We start the server in `-main` (the entry point) using `run-server` from `http-k
 ```clojure
 (defn -main [& args]
   (run-server app {:port 3000})
-  (println "Server inicializado na porta 3000"))
+  (println "Server started on port 3000"))
 ```
 
 Our server is ready!

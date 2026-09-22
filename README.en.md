@@ -81,14 +81,18 @@ Contributions make the open source community a great place to learn, inspire, an
 is **greatly appreciated**.
 
 1. Fork the project
-2. Create a feature branch (`git checkout -b feature/featureBraba`)
-3. Commit your changes (`git commit -m 'Adicionado conteudo brabo'`)
-4. Push the branch (`git push origin feature/featureBraba`)
+2. Create a feature branch (`git checkout -b feature/hyperdrive`)
+3. Commit your changes (`git commit -m 'Add content that is over nine thousand'`)
+4. Push the branch (`git push origin feature/hyperdrive`)
 5. Open a Pull Request
 
 ## Authors
 
 - **João Augusto Lissoni Lanjoni** - _Developer & Member of He4rt Developers_ - [@lanjoni](https://twitter.com/gutolanjoni)
+
+## Contributors
+
+- **Isabela Caovila Baldim** - _Developer & Artist_ - [GitHub @ContagiousMisfit](https://github.com/ContagiousMisfit) · [Instagram @isa_de_jesus.png](https://www.instagram.com/isa_de_jesus.png/)
 
 ---
 

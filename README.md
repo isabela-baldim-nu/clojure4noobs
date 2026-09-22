@@ -89,6 +89,10 @@ são **extremamente apreciadas**
 
 - **João Augusto Lissoni Lanjoni** - _Developer & Member of He4rt Developers_ - [@lanjoni](https://twitter.com/gutolanjoni)
 
+## Contribuidores
+
+- **Isabela Caovila Baldim** - _Desenvolvedora e Artista_ - [GitHub @ContagiousMisfit](https://github.com/ContagiousMisfit) · [Instagram @isa_de_jesus.png](https://www.instagram.com/isa_de_jesus.png/)
+
 ---
 
 <p align="center">

@@ -19,10 +19,10 @@ With maps it is common to use commas for that reason (they are optional), or to 
 The output is the same! Let's define a fixed map for our examples:
 
 ```clojure
-(def musicas {"Dear Future Self (Hands Up)" "Fall Out Boy"
-              "Onlyfans" "Bibi Babydoll"
-              "Naquela Mesa" "Nelson Golçalves"
-              "Everlong" "Foo Fighters"})
+(def songs {"The Imperial March" "John Williams"
+            "Concerning Hobbits" "Howard Shore"
+            "No Time for Caution" "Hans Zimmer"
+            "Ghostbusters" "Ray Parker Jr."})
 ```
 
 ## Get
@@ -30,13 +30,13 @@ The output is the same! Let's define a fixed map for our examples:
 To look up a key we have two options. First, `get`:
 
 ```clojure
-(get musicas "Everlong")
+(get songs "Ghostbusters")
 ```
 
-The output is `"Foo Fighters"`. We can also call the map with the key, as we saw before:
+The output is `"Ray Parker Jr."`. We can also call the map with the key, as we saw before:
 
 ```clojure
-(musicas "Everlong")
+(songs "Ghostbusters")
 ```
 
 Same output!
@@ -46,7 +46,7 @@ Same output!
 We can add new key/value pairs with `assoc`: the map, then the key, then the value.
 
 ```clojure
-(assoc musicas "Zombie" "The Cranberries")
+(assoc songs "Duel of the Fates" "John Williams")
 ```
 
 The output is the full map (items separated by commas) with the new pair added!
@@ -56,17 +56,17 @@ The output is the full map (items separated by commas) with the new pair added!
 We can remove a whole entry by key with `dissoc`!
 
 ```clojure
-(dissoc musicas "Dear Future Self (Hands Up)")
+(dissoc songs "The Imperial March")
 ```
 
-You get the full map without the `"Dear Future Self (Hands Up)"` key and value!
+You get the full map without the `"The Imperial March"` key and value!
 
 ## Contains?
 
 Check whether a map has a key with `contains?`!
 
 ```clojure
-(contains? musicas "Onlyfans")
+(contains? songs "Concerning Hobbits")
 ```
 
 The output is `true`. Looking up `"Free Bird"` would return `false`!
@@ -76,30 +76,30 @@ The output is `true`. Looking up `"Free Bird"` would return `false`!
 Besides checking existence, we can fetch the key and value together with `find`!
 
 ```clojure
-(find musicas "Naquela Mesa")
+(find songs "No Time for Caution")
 ```
 
-The output is `["Naquela Mesa" "Nelson Golçalves"]` — a vector! If the key is missing you get `nil`.
+The output is `["No Time for Caution" "Hans Zimmer"]` — a vector! If the key is missing you get `nil`.
 
 ## Keys
 
 To list every key, use `keys`!
 
 ```clojure
-(keys musicas)
+(keys songs)
 ```
 
-The output is `("Dear Future Self (Hands Up)" "Onlyfans" "Naquela Mesa" "Everlong")`.
+The output is `("The Imperial March" "Concerning Hobbits" "No Time for Caution" "Ghostbusters")`.
 
 ## Vals
 
 To list every value, use `vals`!
 
 ```clojure
-(vals musicas)
+(vals songs)
 ```
 
-The output is `("Fall Out Boy" "Bibi Babydoll" "Nelson Golçalves" "Foo Fighters")`.
+The output is `("John Williams" "Howard Shore" "Hans Zimmer" "Ray Parker Jr.")`.
 
 ## Zipmap
 
@@ -116,7 +116,7 @@ The return value is `{"a" 1, "b" 1, "c" 1}`: keys from the set, values from `(re
 Combining maps is handy. `merge` joins two maps into a new one. First another map:
 
 ```clojure
-(def novas-musicas {"Sweet Child O' Mine" "Guns N' Roses"
+(def new-songs {"Sweet Child O' Mine" "Guns N' Roses"
                     "Dream On" "Aerosmith"
                     "Hotel California" "Eagles"
                     "Come As You Are" "Nirvana"})
@@ -125,7 +125,7 @@ Combining maps is handy. `merge` joins two maps into a new one. First another ma
 Then `merge`:
 
 ```clojure
-(merge musicas novas-musicas)
+(merge songs new-songs)
 ```
 > You can use `merge-with` to define a rule when maps share the same keys!
 

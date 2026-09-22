@@ -7,22 +7,22 @@ See an example:
 ```clojure
 ;; We define an identity, stating
 ;; that we will have a `multimethod`
-(defmulti fatorial identity)
+(defmulti factorial identity)
 
 ;; If factorial is called with
 ;; argument `0`, then
 ;; return 1
-(defmethod fatorial 0 [_]  1)
+(defmethod factorial 0 [_]  1)
 
 ;; Otherwise (:default) we
 ;; compute factorial
 ;; recursively
-(defmethod fatorial :default [n]
-  (* n (fatorial (dec n))))
+(defmethod factorial :default [n]
+  (* n (factorial (dec n))))
 
-(fatorial 0) ;; 1
-(fatorial 1) ;; 1
-(fatorial 3) ;; 6
+(factorial 0) ;; 1
+(factorial 1) ;; 1
+(factorial 3) ;; 6
 ```
 
 This is a clearer way to declare how different methods should be handled. We only recurse when we need to (many factorial examples use an `if` for that check).

@@ -5,7 +5,7 @@ You will find `if` in many languages. Its main job is to take a path when a cond
 Clojure's `if` looks a bit different because everything is a function that takes arguments. A well-known `if` in other languages might look like:
 
 ```javascript
-if (condicao) {
+if (condition) {
   // Do something
 } else {
   // Do something else
@@ -16,15 +16,15 @@ In Clojure it works a little differently:
 
 ```clojure
 (if (> 1 2)
-    (println "1 é maior que 2")
-    (println "1 não é maior que 2"))
+    (println "1 is greater than 2")
+    (println "1 is not greater than 2"))
 
 ;; Return:
-;;  1 não é maior que 2
+;;  1 is not greater than 2
 ;;  nil
 ```
 
-The shape is easy to follow: `(if (condicao) (then-branch) (else-branch))`, with inner functions for each branch.
+The shape is easy to follow: `(if (condition) (then-branch) (else-branch))`, with inner functions for each branch.
 
 We could go further:
 
@@ -32,13 +32,13 @@ We could go further:
 (def a 5)
 
 (if (< a 0)
-    (println "Menor que 0")
+    (println "Less than 0")
     (if (= a 0)
-        (println "Igual a 0")
-        (println "Maior que 0")))
+        (println "Equal to 0")
+        (println "Greater than 0")))
 
 ;; Return:
-;;  Maior que 0
+;;  Greater than 0
 ;;  nil
 ```
 
@@ -47,13 +47,13 @@ To simplify, we can use a local binding with *let*:
 ```clojure
 (let [a 5]
   (if (< a 0)
-    (println "Menor que 0")
+    (println "Less than 0")
     (if (= a 0)
-        (println "Igual a 0")
-        (println "Maior que 0"))))
+        (println "Equal to 0")
+        (println "Greater than 0"))))
 
 ;; Return:
-;;  Maior que 0
+;;  Greater than 0
 ;;  nil
 ```
 
@@ -64,15 +64,15 @@ What if we want more than one expression in a branch? Use `do`:
 ```clojure
 (if (> 1 2)
     (do
-      (println "Epa, recebi seus valores!")
-      (println "Pelo que parece 1 é maior que 2!"))
+      (println "Beep boop, values received!")
+      (println "Looks like 1 is greater than 2, Captain!"))
     (do
-      (println "Epa, recebi seus valores aqui hein!")
-      (println "Pelo que parece 1 não é maior que 2!")))
+      (println "Beep boop, values received over here!")
+      (println "Looks like 1 is not greater than 2, Captain!")))
 
 ;; Return:
-;;  Epa, recebi seus valores aqui hein!
-;;  Pelo que parece 1 não é maior que 2!
+;;  Beep boop, values received over here!
+;;  Looks like 1 is not greater than 2, Captain!
 ;;  nil
 ```
 

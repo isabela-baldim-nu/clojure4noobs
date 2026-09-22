@@ -3,7 +3,7 @@
 Loved by many, disliked by some, `for` is a classic loop. In most languages it looks something like:
 
 ```javascript
-for (inicializa; até que; passo){
+for (init; until; step){
   // Do something
 }
 ```
@@ -19,18 +19,18 @@ Clojure's `for` looks different. Let's look at an example:
 This prints the values from `0` to `9` (the given `range`) as a list. Clojure's `for` is similar to languages that iterate over collections. Here is another example using a vector:
 
 ```clojure
-(def numeros [0 1 2 3 4 5 6 7 8 9])
+(def numbers [0 1 2 3 4 5 6 7 8 9])
 
-(for [i numeros]
+(for [i numbers]
       (println i))
 ```
 
 The result matches the `range` example, but this time we walk the whole vector. We could use `strings` and, instead of `println`, use `str` to concatenate, avoiding that extra printed return. See:
 
 ```clojure
-(def letras ["a" "b" "c" "d" "e"])
+(def letters ["a" "b" "c" "d" "e"])
 
-(for [l letras]
+(for [l letters]
       (str l))
 
 ;; Result:

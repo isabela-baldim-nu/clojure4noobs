@@ -1,33 +1,35 @@
 # Recursion
 
-According to José Romildo Malaquias in Chapter 6 of the [Functional Programming course slides](http://www.decom.ufop.br/romildo/2012-1/bcc222/slides/06-recursividade.pdf) (in Portuguese) from the Computing Department of the Federal University of Ouro Preto, we can say that:
+Borrowing the definition from José Romildo Malaquias (Chapter 6 of his Functional Programming course at the Federal University of Ouro Preto), translated here:
 
 > Recursion is the programming mechanism in which a function (or other object) is defined in terms of itself. A recursive function is a function defined in terms of itself.
+
+> **Recursion**: see *Recursion*. If you want the official word, the [Clojure special forms reference](https://clojure.org/reference/special_forms#recur) has your back.
 
 Roughly: when we see *recursion*, a function calls a subroutine that happens to be itself — an infinite-looking idea applied to something finite (deep, right?).
 
 A fun example is counting backwards (you will see why this matters in a moment):
 
 ```clojure
-(defn contar [n]
+(defn countdown [n]
   (println n)
   (if (pos? (dec n))
-    (contar (dec n))))
+    (countdown (dec n))))
 
-(contar 10)
+(countdown 10)
 ```
 
-This counts from `10` down to `1`, then returns `nil` because of `println`. We print the current number; then `pos?` returns `true` if the number is greater than `0`. If so, we call `contar` again with `n - 1` (`dec` subtracts one, similar to `i -= 1` in other languages).
+This counts from `10` down to `1` (a proper rocket launch countdown), then returns `nil` because of `println`. We print the current number; then `pos?` returns `true` if the number is greater than `0`. If so, we call `countdown` again with `n - 1` (`dec` subtracts one, similar to `i -= 1` in other languages).
 
-Another way is to use `recur` instead of calling `contar` by name:
+Another way is to use `recur` instead of calling `countdown` by name:
 
 ```clojure
-(defn contar-recur [n]
+(defn countdown-recur [n]
   (println n)
   (if (pos? (dec n))
     (recur (dec n))))
 
-(contar-recur 10)
+(countdown-recur 10)
 ```
 
 The result is the same, but `recur` is interesting: it sets up a recursive call more efficiently, without extra stack frames!

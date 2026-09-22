@@ -19,7 +19,7 @@ You might be thinking: "okay, but you said Clojure treats data as plain data —
 Let's define a fixed vector to play with. Feel free to pick your own values and indexes! Mine looks like this:
 
 ```clojure
-(def desenvolvedores
+(def developers
      ["Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício"])
 ```
 
@@ -28,7 +28,7 @@ Let's define a fixed vector to play with. Feel free to pick your own values and 
 How do we get the first item? With `first`!
 
 ```clojure
-(first desenvolvedores)
+(first developers)
 ```
 
 The output is `"Kalane"`, because that is the first index of our vector!
@@ -38,7 +38,7 @@ The output is `"Kalane"`, because that is the first index of our vector!
 And how do we show the remaining items, skipping the first — similar to `tail` in other languages? We use `rest`!
 
 ```clojure
-(rest desenvolvedores)
+(rest developers)
 ```
 
 The output is `("Daniel" "Cherry" "Canhassi" "Fabrício")`!
@@ -48,14 +48,14 @@ The output is `("Daniel" "Cherry" "Canhassi" "Fabrício")`!
 What if we want a specific index? Possible — in two ways, and I will explain why...
 
 ```clojure
-(nth desenvolvedores 3)
+(nth developers 3)
 ```
 > The output is `"Canhassi"`!
 
 Or simply:
 
 ```clojure
-(desenvolvedores 3)
+(developers 3)
 ```
 > The output is `"Canhassi"`!
 
@@ -66,7 +66,7 @@ The second form works because of something we said earlier: `def` is a bit like 
 To count how many values are in the vector, use `count`!
 
 ```clojure
-(count desenvolvedores)
+(count developers)
 ```
 
 The output is `5`, because we have 5 values!
@@ -76,7 +76,7 @@ The output is `5`, because we have 5 values!
 We can also add a new item with `conj`!
 
 ```clojure
-(conj desenvolvedores "Guto")
+(conj developers "Guto")
 ```
 
 The output is `["Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício" "Guto"]` — the new item is added at the **end** of the vector!
@@ -86,15 +86,15 @@ The output is `["Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício" "Guto"]` — t
 To add an element at the beginning of a vector's contents, use `cons`!
 
 ```clojure
-(cons "Guto" desenvolvedores)
+(cons "Guto" developers)
 ```
 
 The output is `("Guto" "Kalane" "Daniel" "Cherry" "Canhassi" "Fabrício")`!
 
-Notice something: we used several functions that "change" the vector and printed modified values, right? Let's look at `desenvolvedores` after all that...
+Notice something: we used several functions that "change" the vector and printed modified values, right? Let's look at `developers` after all that...
 
 ```clojure
-(println desenvolvedores)
+(println developers)
 ```
 
 You will see the original value, unchanged from when it was defined! As mentioned before, Clojure treats structures as immutable: it creates new values you can use however you want, without mutating the original. That is safer for your code!
